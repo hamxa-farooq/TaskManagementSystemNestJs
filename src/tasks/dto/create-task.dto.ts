@@ -1,9 +1,9 @@
-export class CreateTaskDto {
-  title: string;
-  description: string;
-}
+import { IsNotEmpty } from 'class-validator';
 
-export class TasksFilterDto {
-  status: string;
-  search: string;
+export class CreateTaskDto {
+  @IsNotEmpty()
+  title: string;
+
+  @IsNotEmpty()
+  description: string;
 }
